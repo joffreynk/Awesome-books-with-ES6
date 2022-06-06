@@ -2782,7 +2782,7 @@ class Duration {
     if (parsed) {
       return Duration.fromObject(parsed, opts);
     } else {
-      return Duration.invalid(`unparsable`, `the input `${text}` can't be parsed as ISO 8601`);
+      return Duration.invalid(`unparsable`, `the input '${text}' can't be parsed as ISO 8601`);
     }
   }
 
