@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  .bookslist {
+    border: 1px solid #0b0b0b;
+    margin: 15px;
+  }
+
+  .bookslist li > * {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .bookslist li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 0;
+  }
+
+  .contact-info li {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  h1 {
+    margin: 40px 0;
+    text-align: center;
+  }
+
+  .remove-btn {
+    padding: 5px;
+    margin-right: 15px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  #submit {
+    float: right;
+    padding: 3px;
+  }
+
+  h2 {
+    margin-bottom: 15px;
+  }
+
+  .line {
+    max-width: 50px;
+    height: 2px;
+    background: #494545;
+  }
+
+  div .line {
+    min-width: 30%;
+    margin: 40px 35%;
+  }
+
+  #form input {
+    width: 40vw;
+    height: 30px;
+    margin-bottom: 12px;
+  }
+
+  .contact {
+    width: 50%;
+    margin: 0 30%;
+    margin-bottom: 50px;
+  }
+
+  .contact-info > li {
+    margin-top: 20px;
+  }
+
+  .bookslist li:nth-child(odd) {
+    background-color: rgb(202, 201, 201);
+  }
+
+  .contact h2 {
+    margin: 50px auto;
+    margin-left: 10%;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  footer {
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 30px;
+    position: fixed;
+    bottom: 0;
+  }
+
+  .footer {
+    font-size: 15px;
+    border: 1px solid black;
+    padding: 5px;
+  }
+
+  header {
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 20px;
+  }
+
+  .nav-section {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 5px;
+  }
+
+  .nav-section ul {
+    display: flex;
+    gap: 6px;
+    list-style: none;
+  }
+
+  .nav-section li:nth-child(-n+2) {
+    border-right: 1px solid gray;
+    padding-right: 6px;
+  }
+
+  .current-date {
+    float: right;
+    padding-right: 10px;
+    padding-top: 5px;
+  }
+
+  .links {
+    cursor: pointer;
+  }
+
+  section {
+    display: none;
+  }
+
+  .list-section {
+    display: block;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .showElement {
+    display: block;
+  }
