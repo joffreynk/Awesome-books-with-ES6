@@ -49,6 +49,7 @@ const addbook = (title, author) => {
     mybooks(books);
   }
 };
+
 const submitbtn = document.getElementById('submit');
 submitbtn.addEventListener('click', () => {
   const title = document.getElementById('input-title');
@@ -59,6 +60,5 @@ submitbtn.addEventListener('click', () => {
   author.value = '';
   title.value = '';
 });
-
 
 export default Book;
