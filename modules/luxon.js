@@ -3530,7 +3530,7 @@ class Interval {
         }
       }
     }
-    return Interval.invalid(`unparsable`, `the input `${text}` can't be parsed as ISO 8601`);
+    return Interval.invalid(`unparsable`, `the input '${text}' can't be parsed as ISO 8601`);
   }
 
   /**
@@ -4990,7 +4990,7 @@ function parseDataToDateTime(parsed, parsedZone, opts, format, text, specificOff
     return setZone ? inst : inst.setZone(zone);
   } else {
     return DateTime.invalid(
-      new Invalid(`unparsable`, `the input `${text}` can't be parsed as ${format}`)
+      new Invalid(`unparsable`, `the input '${text}' can't be parsed as ${format}`)
     );
   }
 }
