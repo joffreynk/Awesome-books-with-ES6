@@ -1,7 +1,7 @@
-import { mybooks } from './modules/listBooks.js';
-import { Book } from './modules/manageBooks.js';
-import { manageLinks } from './modules/manageLinks.js';
-import { removeBook } from './modules/removeBook.js';
+import mybooks from './modules/listBooks.js';
+import Book from './modules/manageBooks.js';
+import manageLinks from './modules/manageLinks.js';
+import removeBook from './modules/removeBook.js';
 import { DateTime } from './modules/luxon.js';
 
 if (localStorage.getItem('books') !== null && localStorage.getItem('books') !== undefined) {

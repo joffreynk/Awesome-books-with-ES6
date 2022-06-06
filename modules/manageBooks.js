@@ -1,4 +1,5 @@
-import { mybooks } from './listBooks.js';
+import mybooks from './listBooks.js';
+
 class Books {
   constructor() {
     this.id = '';
@@ -52,7 +53,7 @@ const addbook = (title, author) => {
     Book.addBook(
       books.length > 0 ? books[books.length - 1].id + 1 : 1,
       author,
-      title
+      title,
     );
     books = Book.getBooks();
     localStorage.setItem('books', JSON.stringify(books));
@@ -60,4 +61,4 @@ const addbook = (title, author) => {
   }
 };
 
-export { Book};
+export default Book;
