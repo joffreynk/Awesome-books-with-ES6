@@ -34,17 +34,6 @@ if (localStorage.getItem('books') !== null && localStorage.getItem('books') !== 
 }
 let books = Book.getBooks();
 
-const submitbtn = document.getElementById('submit');
-submitbtn.addEventListener('click', () => {
-  const title = document.getElementById('input-title');
-  const author = document.getElementById('input-author');
-  const titleIpnut = title.value;
-  const authorIpnut = author.value;
-  addbook(titleIpnut, authorIpnut);
-  author.value = '';
-  title.value = '';
-});
-
 const addbook = (title, author) => {
   if (title.length < 2 && author.length < 1) {
     const message = document.getElementById('message');
@@ -60,5 +49,16 @@ const addbook = (title, author) => {
     mybooks(books);
   }
 };
+const submitbtn = document.getElementById('submit');
+submitbtn.addEventListener('click', () => {
+  const title = document.getElementById('input-title');
+  const author = document.getElementById('input-author');
+  const titleIpnut = title.value;
+  const authorIpnut = author.value;
+  addbook(titleIpnut, authorIpnut);
+  author.value = '';
+  title.value = '';
+});
+
 
 export default Book;
