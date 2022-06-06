@@ -4864,7 +4864,7 @@ const INVALID = `Invalid DateTime`;
 const MAX_DATE = 8.64e15;
 
 function unsupportedZone(zone) {
-  return new Invalid(`unsupported zone`, `the zone `${zone.name}` is not supported`);
+  return new Invalid(`unsupported zone`, `the zone '${zone.name}' is not supported`);
 }
 
 // we cache week data on the DT object and this intermediates the cache
