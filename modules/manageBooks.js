@@ -1,9 +1,9 @@
-import { mybooks } from "./listBooks.js";
+import { mybooks } from './listBooks.js';
 class Books {
   constructor() {
-    this.id = "";
-    this.author = "";
-    this.title = "";
+    this.id = '';
+    this.author = '';
+    this.title = '';
     this.books = [];
   }
 
@@ -28,26 +28,26 @@ class Books {
 }
 
 const Book = new Books();
-if (localStorage.getItem("books") !== null && localStorage.getItem("books") !== undefined) {
-  Book.setBooks(JSON.parse(localStorage.getItem("books")));
+if (localStorage.getItem('books') !== null && localStorage.getItem('books') !== undefined) {
+  Book.setBooks(JSON.parse(localStorage.getItem('books')));
 }
 let books = Book.getBooks();
 
-const submitbtn = document.getElementById("submit");
-submitbtn.addEventListener("click", () => {
-  const title = document.getElementById("input-title");
-  const author = document.getElementById("input-author");
+const submitbtn = document.getElementById('submit');
+submitbtn.addEventListener('click', () => {
+  const title = document.getElementById('input-title');
+  const author = document.getElementById('input-author');
   const titleIpnut = title.value;
   const authorIpnut = author.value;
   addbook(titleIpnut, authorIpnut);
-  author.value = "";
-  title.value = "";
+  author.value = '';
+  title.value = '';
 });
 
 const addbook = (title, author) => {
   if (title.length < 2 && author.length < 1) {
-    const message = document.getElementById("message");
-    message.innerHTML = "please, fill all input fields";
+    const message = document.getElementById('message');
+    message.innerHTML = 'please, fill all input fields';
   } else {
     Book.addBook(
       books.length > 0 ? books[books.length - 1].id + 1 : 1,
@@ -55,9 +55,9 @@ const addbook = (title, author) => {
       title
     );
     books = Book.getBooks();
-    localStorage.setItem("books", JSON.stringify(books));
+    localStorage.setItem('books', JSON.stringify(books));
     mybooks(books);
   }
-}
+};
 
 export { Book};
