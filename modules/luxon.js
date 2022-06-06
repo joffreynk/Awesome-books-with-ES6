@@ -432,10 +432,10 @@ function parseZoneInfo(ts, offsetFormat, locale, timeZone = null) {
     intlOpts = {
       hourCycle: `h23`,
       year: `numeric`,
-      month: `2-digit`,
-      day: `2-digit`,
-      hour: `2-digit`,
-      minute: `2-digit`,
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
     };
 
   if (timeZone) {
@@ -555,7 +555,7 @@ function months(length) {
       return [...monthsLong];
     case `numeric`:
       return [`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`];
-    case `2-digit`:
+    case '2-digit':
       return [`01`, `02`, `03`, `04`, `05`, `06`, `07`, `08`, `09`, `10`, `11`, `12`];
     default:
       return null;
@@ -891,7 +891,7 @@ class Formatter {
           case `d`:
             return useDateTimeFormatter ? string({ day: `numeric` }, `day`) : this.num(dt.day);
           case `dd`:
-            return useDateTimeFormatter ? string({ day: `2-digit` }, `day`) : this.num(dt.day, 2);
+            return useDateTimeFormatter ? string({ day: '2-digit' }, `day`) : this.num(dt.day, 2);
           // weekdays - standalone
           case `c`:
             // like 1
@@ -927,7 +927,7 @@ class Formatter {
           case `LL`:
             // like 01, doesn't seem to work
             return useDateTimeFormatter
-              ? string({ month: `2-digit`, day: `numeric` }, `month`)
+              ? string({ month: '2-digit', day: `numeric` }, `month`)
               : this.num(dt.month, 2);
           case `LLL`:
             // like Jan
@@ -947,7 +947,7 @@ class Formatter {
           case `MM`:
             // like 01
             return useDateTimeFormatter
-              ? string({ month: `2-digit` }, `month`)
+              ? string({ month: '2-digit' }, `month`)
               : this.num(dt.month, 2);
           case `MMM`:
             // like Jan
@@ -965,7 +965,7 @@ class Formatter {
           case `yy`:
             // like 14
             return useDateTimeFormatter
-              ? string({ year: `2-digit` }, `year`)
+              ? string({ year: '2-digit' }, `year`)
               : this.num(dt.year.toString().slice(-2), 2);
           case `yyyy`:
             // like 0012
@@ -1228,11 +1228,11 @@ function makeDTF(zone) {
       hour12: false,
       timeZone: zone,
       year: `numeric`,
-      month: `2-digit`,
-      day: `2-digit`,
-      hour: `2-digit`,
-      minute: `2-digit`,
-      second: `2-digit`,
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
       era: `short`,
     });
   }
@@ -4015,7 +4015,7 @@ class Info {
   /**
    * Return an array of standalone month names.
    * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat
-   * @param {string} [length='long'] - the length of the month representation, such as `numeric`, `2-digit`, `narrow`, `short`, `long`
+   * @param {string} [length='long'] - the length of the month representation, such as `numeric`, '2-digit', `narrow`, `short`, `long`
    * @param {Object} opts - options
    * @param {string} [opts.locale] - the locale code
    * @param {string} [opts.numberingSystem=null] - the numbering system
@@ -4041,7 +4041,7 @@ class Info {
    * Format months differ from standalone months in that they're meant to appear next to the day of the month. In some languages, that
    * changes the string.
    * See {@link Info#months}
-   * @param {string} [length='long'] - the length of the month representation, such as `numeric`, `2-digit`, `narrow`, `short`, `long`
+   * @param {string} [length='long'] - the length of the month representation, such as `numeric`, '2-digit', `narrow`, `short`, `long`
    * @param {Object} opts - options
    * @param {string} [opts.locale] - the locale code
    * @param {string} [opts.numberingSystem=null] - the numbering system
@@ -4473,18 +4473,18 @@ function unitForToken(token, loc) {
 
 const partTypeStyleToTokenVal = {
   year: {
-    `2-digit`: `yy`,
+    '2-digit': `yy`,
     numeric: `yyyyy`,
   },
   month: {
     numeric: `M`,
-    `2-digit`: `MM`,
+    '2-digit': `MM`,
     short: `MMM`,
     long: `MMMM`,
   },
   day: {
     numeric: `d`,
-    `2-digit`: `dd`,
+    '2-digit': `dd`,
   },
   weekday: {
     short: `EEE`,
@@ -4494,15 +4494,15 @@ const partTypeStyleToTokenVal = {
   dayPeriod: `a`,
   hour: {
     numeric: `h`,
-    `2-digit`: `hh`,
+    '2-digit': `hh`,
   },
   minute: {
     numeric: `m`,
-    `2-digit`: `mm`,
+    '2-digit': `mm`,
   },
   second: {
     numeric: `s`,
-    `2-digit`: `ss`,
+    '2-digit': `ss`,
   },
 };
 
